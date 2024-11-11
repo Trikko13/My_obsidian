@@ -1,0 +1,11 @@
+0x7e17369c16cc0b5fd06ebc5e39119c9a6f66fcb9 - Rencrypto
+0x59d898d5db5364cd83f09a3d7dfdb78f1a5d347e - Mishaberkut
+0x71dead1ec531d3f32f565b17f4cc0a092b72825e - Davy Egor
+0x0b762e494daba875b6722bab12736d5308449aed  -Crypton
+0x7ffe7dc1d0f21822fb634fa5afe84d848a0699a7 - Defigen twink
+0xa734439d26ce4dbf43ed7eb364ec409d949bb369 - Bogdan whitelist
+0x0c86262354095fa35a21b58af3e0dd94d0ba767c - yunghustlerdao
+0x795076b0f5cea89e45a493acd2721f330fd79b73 - Dima Mudak
+
+
+==obsidian://open?vault=Talbadoro&file=Cache%2Fstn%20tiage%20teke.png
