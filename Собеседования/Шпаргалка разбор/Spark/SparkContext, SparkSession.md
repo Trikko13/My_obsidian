@@ -1,200 +1,160 @@
-### **1. Что такое SparkContext?**
 
-`SparkContext` — это главный объект в Spark, который:
 
-- Связывает вашу программу с **кластером Spark**.
-- Управляет распределённой обработкой данных.
-- Создаёт **RDD** (Resilient Distributed Dataset) — базовую структуру данных Spark.
+#### **1. Что такое SparkContext?**
 
-#### **Функции SparkContext:**
+`SparkContext` — это главный объект в Spark, который:
 
-1. **Связь с кластером:**
-    
-    - SparkContext передаёт задачи на исполнение узлам кластера.
-    - Например, в режиме `local` кластером будет ваш компьютер.
-2. **Управление RDD:**
-    
-    - SparkContext создаёт и управляет RDD:
-        - Разделяет данные на партиции.
-        - Отправляет партиции на узлы для обработки.
-        - Следит за выполнением задач.
-3. **Настройка параметров:**  
-    Через SparkContext вы задаёте:
-    
-    - Режим работы (`local`, `yarn`, `standalone`).
-    - Количество используемых ресурсов (память, процессоры).
-#### **Пример с SparkContext:**
+- Устанавливает связь между приложением и кластером.
+- Управляет распределением задач и ресурсов.
+- Создаёт и контролирует RDD (Resilient Distributed Dataset).
 
-`from pyspark import SparkContext`
+#### **Ключевые функции SparkContext:**
 
-`#Создаём SparkContext`
-`sc = SparkContext("local", "Example App")`
+1. **Связь с кластером:**  
+    Передаёт задачи узлам кластера (executor'ам) и координирует их выполнение.
+2. **Управление RDD:**  
+    Создаёт RDD, делит данные на партиции, распределяет их между узлами.
+3. **Настройка работы:**  
+    Устанавливает режим работы (`local`, `yarn`), задаёт ресурсы (память, ядра).
 
-`#Создаём RDD из списка`
-`data = [1, 2, 3, 4, 5]`
-`rdd = sc.parallelize(data)`
+---
 
-`print(rdd.collect())  # [1, 2, 3, 4, 5]`
+#### **Пример работы с SparkContext:**
 
-`#Останавливаем SparkContext`
+
+`from pyspark import SparkContext`  
+
+`Создаём SparkContext`
+`sc = SparkContext("local", "Example App")` 
+
+`Создаём RDD из списка` 
+`data = [1, 2, 3, 4, 5]` 
+`rdd = sc.parallelize(data)`  
+
+`print(rdd.collect())  # [1, 2, 3, 4, 5]`  
+
+`Останавливаем SparkContext` 
+
 `sc.stop()`
 
-### **2. Что такое SparkSession?**
+---
 
-`SparkSession` — это более современный и универсальный интерфейс, который появился в Spark 2.0. Он объединяет функциональность:
+#### **2. Что такое SparkSession?**
 
-- **SparkContext**
-- **SQLContext**
-- **HiveContext**
-- Другие компоненты для работы с Spark.
+`SparkSession` появился в Spark 2.0 как универсальный интерфейс для работы:
 
-С помощью `SparkSession` вы можете:
+- С RDD.
+- С DataFrame и SQL.
+- С другими компонентами Spark (MLlib, Streaming, Hive).
 
-- Работать с RDD.
-- Использовать DataFrame и SQL.
-- Чаще всего рекомендуется использовать именно `SparkSession`, а не вручную создавать `SparkContext`.
+**SparkSession** автоматически включает:
+
+1. **SparkContext:** для работы с RDD.
+2. **SQLContext:** для выполнения SQL-запросов.
+3. **HiveContext:** для интеграции с Hive.
 
 ---
 
 #### **Функции SparkSession:**
 
-1. **Создание SparkContext:**
+1. **Управление RDD и DataFrame:**  
+    Позволяет работать как с RDD, так и с таблицами (DataFrame).  
+    Пример:
     
-    - Когда вы создаёте `SparkSession`, Spark автоматически создаёт `SparkContext` (вы можете получить его через `spark.sparkContext`).
-2. **Работа с DataFrame и SQL:**
+
+    `spark = SparkSession.builder.appName("DataFrame Example").getOrCreate() df = spark.read.csv("data.csv", header=True, inferSchema=True) df.show()`
     
-    - `SparkSession` упрощает работу с таблицами и структурированными данными.
-    - Пример:
-             
-        `from pyspark.sql import SparkSession  
-        `spark = SparkSession.builder.appName("DataFrame Example").getOrCreate() 
-        `df = spark.read.csv("path/to/file.csv", header=True, inferSchema=True) 
-        `df.show()`
-        
-3. **Интеграция с другими компонентами:**
+2. **Интеграция с другими библиотеками:**  
+    Например, для машинного обучения (MLlib) или потоковой обработки данных (Streaming).
     
-    - Hive, MLlib, Streaming — всё это доступно через `SparkSession`.
-### **3. Разница между SparkContext и SparkSession**
-
-|**Функция**|**SparkContext**|**SparkSession**|
-|---|---|---|
-|**Назначение**|Управление RDD и кластером|Универсальный интерфейс (RDD, DataFrame)|
-|**Современность**|Старый способ работы|Рекомендуемый способ с Spark 2.0+|
-|**Работа с SQL**|Не поддерживает|Поддерживает|
-|**Интеграция с Hive**|Не поддерживает|Поддерживает|
-### **4. Как они связаны?**
-
-- `SparkSession` включает в себя `SparkContext`. Если вы создаёте `SparkSession`, вам не нужно вручную создавать `SparkContext` — он уже есть:
-
-    `from pyspark.sql import SparkSession  
-    `spark = SparkSession.builder.master("local").appName("Example").getOrCreate()  
+3. **Упрощение работы:**  
+    Вместо ручного создания `SparkContext` и `SQLContext`, достаточно одного объекта `SparkSession`.
     
-	`Получение SparkContext из SparkSession sc = spark.sparkContext`
-### **5. Почему нужно использовать SparkSession?**
-
-1. **Удобство:**  
-    Через один интерфейс (`SparkSession`) вы получаете доступ к RDD, DataFrame, SQL и другим компонентам.
-2. **Совместимость:**  
-    Это стандартный способ работы в новых версиях Spark.
-3. **Меньше ошибок:**  
-    Spark автоматически создаёт и управляет SparkContext, минимизируя ошибки, как в вашем примере.
 
 ---
 
-### **6. Пример работы с RDD через SparkSession**
+#### **Пример работы с SparkSession:**
 
-Даже если вы работаете с RDD, `SparkSession` — это лучший выбор:
 
 `from pyspark.sql import SparkSession`  
 
-`# Создаём SparkSession
+`Создаём SparkSession` 
+`spark = SparkSession.builder.master("local").appName("Example").getOrCreate()`  
+
+`Работа с DataFrame` 
+`df = spark.read.csv("data.csv", header=True, inferSchema=True)` 
+`df.show()`  
+
+`Получение SparkContext из SparkSession` 
+`sc = spark.sparkContext` 
+`print(sc)`  
+
+`Останавливаем SparkSession` 
+`spark.stop()`
+
+---
+
+#### **3. Основные различия между SparkContext и SparkSession**
+
+|**Функция**|**SparkContext**|**SparkSession**|
+|---|---|---|
+|**Назначение**|Управление RDD и кластером|Универсальный интерфейс (RDD, DataFrame, SQL)|
+|**Современность**|Устаревший способ|Рекомендуется для использования с Spark 2.0+|
+|**Работа с SQL**|Не поддерживает|Поддерживает|
+|**Интеграция с Hive**|Не поддерживает|Полная поддержка|
+
+---
+
+#### **4. Как они связаны?**
+
+- `SparkSession` автоматически создаёт и включает `SparkContext`.  
+    Если вам нужен доступ к `SparkContext`, его можно получить через `spark.sparkContext`.
+
+Пример:
+
+`spark = SparkSession.builder.appName("Example").getOrCreate() sc = spark.sparkContext`
+
+---
+
+#### **5. Почему стоит использовать SparkSession?**
+
+1. **Удобство:**  
+    Один интерфейс для работы с RDD, DataFrame, SQL, Hive и другими компонентами.
+2. **Совместимость:**  
+    Современный стандарт, поддерживаемый Spark 2.0+.
+3. **Автоматизация:**  
+    Упрощает настройку и управление SparkContext.
+
+---
+
+#### **6. Пример работы с RDD через SparkSession**
+
+Даже при работе с RDD стоит использовать SparkSession. Вот пример:
+
+
+`from pyspark.sql import SparkSession`  
+
+`Создаём SparkSession` 
 `spark = SparkSession.builder.master("local").appName("RDD Example").getOrCreate()`  
 
-`# Получаем SparkContext из SparkSession` 
+`Получаем SparkContext` 
 `sc = spark.sparkContext`  
 
-`# Работаем с RDD` 
+`Создаём RDD` 
 `data = [1, 2, 3, 4, 5]` 
-`rdd = sc.parallelize(data)` 
-`squared_rdd = rdd.map(lambda x: x**2)` 
-`print(squared_rdd.collect())  # [1, 4, 9, 16, 25]`  
-`
-`# Останавливаем SparkSession` 
+`rdd = sc.parallelize(data)`  
+
+`Применяем трансформацию map squared_rdd = rdd.map(lambda x: x**2) print(squared_rdd.collect())  # [1, 4, 9, 16, 25]`  
+`Останавливаем SparkSession` 
 `spark.stop()`
 
-Давай разберём этот код построчно, чтобы стало понятно, что он делает:
----
-### **Код:**
-
-
-`from pyspark.sql import SparkSession`
-
-1. **Импортируем SparkSession:**
-    - Это основной объект, который управляет всей работой Spark.
-    - Через `SparkSession` можно создавать RDD, DataFrame, запускать SQL-запросы и использовать другие функции Spark.
-
----
-`spark = SparkSession.builder.master("local").appName("RDD Example").getOrCreate()`
-
-2. **Создаём SparkSession:**
-    - **`SparkSession.builder`**: Запускает процесс настройки `SparkSession`.
-    - **`.master("local")`**: Указывает режим работы. Здесь `"local"` означает, что Spark работает на одном компьютере, а не на распределённом кластере.
-    - **`.appName("RDD Example")`**: Указывает имя приложения Spark, которое будет отображаться в интерфейсе Spark UI.
-    - **`.getOrCreate()`**: Либо создаёт новый `SparkSession`, либо возвращает существующий, если он уже запущен.
-
----
-`sc = spark.sparkContext`
-
-3. **Получаем SparkContext из SparkSession:**
-    - `SparkSession` включает в себя `SparkContext`.
-    - Здесь мы обращаемся к `SparkContext` для работы с RDD, так как RDD создаются через `SparkContext`.
-
----
-`data = [1, 2, 3, 4, 5]`
-
-4. **Создаём локальную коллекцию в Python:**
-    - Это обычный Python-список, который содержит 5 чисел.
-    - Пока это просто локальные данные, которые существуют в памяти Python.
-
----
-`rdd = sc.parallelize(data)`
-
-5. **Преобразуем локальные данные в RDD:**
-    - **`sc.parallelize(data)`**: Разбивает данные на **партиции** и распределяет их для обработки в Spark.
-    - Теперь `rdd` — это распределённая коллекция (RDD), которая готова к параллельной обработке.
-
----
-`squared_rdd = rdd.map(lambda x: x**2)`
-
-6. **Применяем трансформацию `map`:**
-    - **`rdd.map(func)`**: Применяет функцию `func` к каждому элементу RDD.
-    - **`lambda x: x**2`**: Это анонимная функция, которая возводит каждое число в квадрат.
-    - Результатом является новый RDD (`squared_rdd`), который содержит числа `[1, 4, 9, 16, 25]`.
-
 ---
 
-`print(squared_rdd.collect())`
+### **Итоговая логика работы:**
 
-7. **Действие `collect`:**
-    - **`collect()`**: Собирает все элементы RDD обратно в локальный Python-список.
-    - Здесь результат `[1, 4, 9, 16, 25]` выводится в консоль.
-
----
-
-`spark.stop()`
-
-8. **Останавливаем SparkSession:**
-    - Это завершает работу приложения Spark.
-    - Освобождаются все ресурсы, занятые Spark, включая драйвер и исполнителей.
-
----
-### **Итоговая логика программы:**
-
-1. Импортируется SparkSession.
-2. Создаётся SparkSession в локальном режиме.
-3. Получается SparkContext из SparkSession.
-4. Локальный список преобразуется в RDD.
-5. На RDD выполняется трансформация (`map`), возводя элементы в квадрат.
-6. Результат собирается в Python-список и выводится.
-7. Приложение Spark завершается.
-
+1. **SparkContext:**  
+    Основной объект для работы с RDD и распределёнными вычислениями.
+2. **SparkSession:**  
+    Универсальный интерфейс для работы с RDD, DataFrame, SQL и другими компонентами.
+3. **Лучше использовать SparkSession:**  
+    Это упрощает настройку и совместимость с новыми версиями Spark.
