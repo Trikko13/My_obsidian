@@ -73,7 +73,7 @@
 	`SELECT * FROM table1 ORDER BY join_key 
 `) t1 
 `JOIN ( 
-	`SELECT * FROM table2 ORDER BY join_key 
+	`SELECT * F ROM table2 ORDER BY join_key 
 `) t2 
 `ON t1.join_key = t2.join_key;`
 
