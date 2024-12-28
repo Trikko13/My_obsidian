@@ -53,5 +53,12 @@ consensus and conviction - согласие/консенсус и убежден
 explicit -- конкретный/прямой
 <!--SR:!2024-09-24,1,214-->
 exogenous -- внешне обусловленный
+propitiously -- благоприятно
+
+ oscillations -- колебания
+ invariably -- незименновсегда
+ confess -- признаваться
+ alternate -- альтернатива
+ pendulums, -- маятник
 
  
