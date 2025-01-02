@@ -5,6 +5,6 @@ DBT - находится поверх DW и организует процесс 
 
 [[Kimball and Inman differencies ]]
 
-[[Нормализация данных]]
+[[Data/Data engineering/DBT/DBT foundamentals/Нормализация данных]]
 
 
