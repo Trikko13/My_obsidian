@@ -1,3 +1,4 @@
+
 #flashcards
 depth -- глубина
 <!--SR:!2024-10-04,16,290-->
@@ -63,3 +64,9 @@ tease -- вычленить
 commend -- хвалить
 imminent -- неминуемы
 omit -- опущу (из виду)
+deteriorations -- ухудшение качества
+Influx -- приток
+disrupted -- нарушенное
+curtailing -- сворачивание
+negligible -- незначительно
+subsequent -- последующие
