@@ -64,9 +64,13 @@ tease -- вычленить
 commend -- хвалить
 imminent -- неминуемы
 omit -- опущу (из виду)
+<<<<<<< HEAD
 deteriorations -- ухудшение качества
 Influx -- приток
 disrupted -- нарушенное
 curtailing -- сворачивание
 negligible -- незначительно
 subsequent -- последующие
+=======
+latter -- последний
+>>>>>>> origin/main

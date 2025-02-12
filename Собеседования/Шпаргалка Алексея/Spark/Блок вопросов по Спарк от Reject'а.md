@@ -16,7 +16,7 @@ A:
 2. Shuffle Hash Join
 3. Broadcast Hash Join
 4. Cartesian Join
-5. Broadcasted Nested Loop Join
+5. BroadcastedNested Loop Join
 Касательно реализации каждого типа джоина рекомендую погуглить, потому что я в свое время только с 3-4 пояснения понял что да как.
 
 
