@@ -342,3 +342,24 @@ Long-Term Economic Trends
 ### **Применение**
 
 - Учитывать, что текущая позитивная фаза может быть временной частью большого цикла, и готовиться к возможным негативным изменениям.
+
+
+But remember, a swinging pendulum may be at its midpoint “on
+average,” but it actually spends very little time there. The same is true
+of financial market performance. Here’s a fun question (and a good
+illustration): for how many of the 47 years from 1970 through 2016
+was the annual return on the S&P 500 within 2% of “normal”—that
+is, between 8% and 12%?
+I expected the answer to be “not that often,” but I was surprised to
+learn that it had happened only three times! It also surprised me to
+learn that the return had been more than 20 percentage points away
+from “normal”—either up more than 30% or down more than 10%—
+more than one-quarter of the time: 13 out of the last 47 years. So one
+thing that can be said with total conviction about stock market
+performance is that the average certainly isn’t the norm. Market
+fluctuations of this magnitude aren’t nearly fully explained by the
+changing fortunes of companies, industries or economies. They’re
+largely attributable to the mood swings of investors.
+
+ИЗ этого следует что средняя доходность точно не является нормальной, ибо экстремальные отклонения (плюс 30 % и минус 15% были порядка 25% от общего срока). И цена доходностей компаний из года года весьма не всегда иллюстрировала именно такие колебания, что нельзя сказать о настроении инвесторов. Тут немного непонятно в какое место вставить эффективность рынка по Фаму.
+Сттоит заметить что они не случайным образом разбросаны по  50 летнему горизонту, они кластеризованы внутри 1-2 лет идентичного по направлению экстремум движениюя  Херб стейн говорил что такие колабния сохраняются в течении некоего времени. **Речи о V образных откупах - нет.** И я думаю нам стоит перестать цепляться за пост пандемийные флуктуации.
