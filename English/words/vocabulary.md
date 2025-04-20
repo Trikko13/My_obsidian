@@ -64,13 +64,36 @@ tease -- вычленить
 commend -- хвалить
 imminent -- неминуемы
 omit -- опущу (из виду)
-<<<<<<< HEAD
 deteriorations -- ухудшение качества
 Influx -- приток
 disrupted -- нарушенное
 curtailing -- сворачивание
 negligible -- незначительно
-subsequent -- последующие
-=======
-latter -- последний
->>>>>>> origin/main
+interrelated -- взаимосвязаны
+credulousness -- доверчивость
+insistent -- настойчиво
+Impairment --  ухудшение
+exacerbate  -- обострять
+Subtle -- трудноуловимый тонкий
+Inference -- ввыведение, вывод логический 
+Crunches -- хруст
+Rigorous -- строгий , тщательные
+Insist -- настаивая
+stringent -- строгий
+deteriorate. -- ухудшаться
+abate. -- сокращать
+Subtle -- трудноуловимый тонкий
+Inference -- ввыведение, вывод логический 
+Crunches -- хруст
+Rigorous -- строгий , тщательные
+Insist  -- настаивая
+entail -- влечь за собой
+bening -- доброкачественный
+platitudes -- банальност
+in advance -- заране
+obscure -- неясный
+precarious -- шаткий ненадежный
+shrugged off --- отмахнуться , пожать плечами
+no ebullience --никакого энтузиазма
+subtle -- тонкий
+eliminate -- устранить

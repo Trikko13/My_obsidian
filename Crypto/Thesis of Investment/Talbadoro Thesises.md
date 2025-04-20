@@ -16,3 +16,19 @@
 		* 
 	* 2024
 		* Как забрать профит. Intuition: If you know your own mind well enough, you know when you get euphoric yourself, become aware of it, and use that ´feeling´ as a sell-indicator. Also, when you are scared, use that as a buy-indicator. This is not easy at all, takes years to learn imo, but personally this is my main way of making decisions. I have an article on how to use intuition on my blog, there you can read it
+
+
+
+Roundtripped guy tips (https://x.com/Zeneca/status/1898540292313317489)
+1) Всегда продавай раньше и теряй потенциальный доход, чем держи до нуля
+2) При  скрине или чувстве коня, режь 50% минимум.
+3) Убеждение не купишь, и токен не удержишь
+4) Не ставь на оутперформ БТС. Покупай БТС!
+5) Плыви против "все еще дешев" течения, через боль
+6) Крипо все запутывает, даже 10-% крутапя доходность в реале. Не рискуй в дефи, используй это в накоплении инвеста!
+7) Люди пеоценивают то что могшут добиться за год и переоценивают то что за год
+
+
+Дефи ресерч от СТефена (https://www.youtube.com/watch?v=FqJrdWoFqK8)
+
+Спот ассиметрия - https://x.com/DeFiMinty/status/1904358887181951044
