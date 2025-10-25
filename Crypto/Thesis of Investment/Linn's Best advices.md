@@ -1,3 +1,4 @@
+
 - always have a BTC/ETH as a form of better reak estate.
 	- I really want you to take a moment to appreciate how big this space will become, truly how much money will flow in (and how high the valuations of our bags could become). Also notice “next 5 years”, we’ll see impressive growth over the coming 1-2 years, but people need to stop being so impatient and start seeing the bigger picture. Some bags you may never want to sell 100% of, you may always want to have some BTC/ETH to borrow against, to hold as a new better form of real estate. Many things will go to zero, but when you see quality, dream a little bigger. Amazon, Google, Apple stock did not instantly sprout multi-millionares in the first 6 months. I’m saying this as much to you as to myself to ensure I don’t let my bear market ptsd sell projects before they can truly realise what they can become.
 - Pendle as a new instution toolbox and how to get yield on BTC while borrowing ETH
