@@ -1,0 +1,12 @@
+{
+  "minimal-style@@minimal-code-scroll": false,
+  "minimal-style@@code-normal@@light": "#950848",
+  "gruvbox-material-theme-override@@gray": "#4E4945",
+  "Editor@@code-value@@dark": "#462FA5",
+  "Editor@@code-tag@@dark": "#CC1616",
+  "Editor@@code-function@@dark": "#53DE04",
+  "Editor@@code-important@@dark": "#203B84",
+  "Editor@@code-keyword@@dark": "#5A2236",
+  "Editor@@code-normal@@dark": "#08F1D3",
+  "things-style@@code-color-d": "#006BE1"
+}

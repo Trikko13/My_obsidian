@@ -1,0 +1,45 @@
+/***** Styling for Code Blocks *****/
+pre {
+    background-color: #1e1e2e !important; /* Темный фон */
+    color: #a9b1d6 !important; /* Мягкий светло-синий текст */
+    font-family: 'JetBrains Mono', monospace; /* Моноширинный шрифт */
+    border: 1px solid #44475a; /* Легкий контур */
+    border-radius: 8px; /* Скругленные углы */
+    padding: 12px; /* Отступы внутри */
+    line-height: 1.6; /* Межстрочный интервал */
+    overflow: auto; /* Прокрутка при необходимости */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень */
+}
+
+/***** Inline Code Styling *****/
+code {
+    background-color: #2d3440 !important; /* Чуть светлее, чем у блоков */
+    color: #c0caf5 !important; /* Яркий текст */
+    font-family: 'Fira Code', monospace; /* Поддержка лигатур */
+    border-radius: 5px;
+    padding: 2px 6px; /* Отступы вокруг текста */
+    font-size: 90%; /* Чуть меньше обычного текста */
+    white-space: nowrap; /* Однострочный вид */
+}
+
+/***** Syntax Highlighting *****/
+pre span.token.comment {
+    color: #5eacd3 !important; /* Комментарии — голубоватые */
+    font-style: italic;
+}
+pre span.token.keyword {
+    color: #c678dd !important; /* Ключевые слова — сиреневые */
+    font-weight: bold;
+}
+pre span.token.string {
+    color: #98c379 !important; /* Строки — зелёные */
+}
+pre span.token.function {
+    color: #61afef !important; /* Функции — голубые */
+}
+pre span.token.operator {
+    color: #e06c75 !important; /* Операторы — красные */
+}
+pre span.token.variable {
+    color: #d19a66 !important; /* Переменные — оранжевые */
+}
