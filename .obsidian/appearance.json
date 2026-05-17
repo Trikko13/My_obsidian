@@ -1,14 +1,13 @@
 {
-  "accentColor": "#30b3df",
-  "cssTheme": "Border",
+  "accentColor": "#52646b",
+  "cssTheme": "",
   "baseFontSize": 18,
   "theme": "obsidian",
   "interfaceFontFamily": "Bodoni 72",
   "textFontFamily": "Cambria",
   "enabledCssSnippets": [
     "custom",
-    "test",
-    "shesh"
+    "test"
   ],
   "nativeMenus": true
 }
